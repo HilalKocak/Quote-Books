@@ -1,6 +1,6 @@
 <template>
     <div class="column">
-      <h2>Kategoriler</h2>
+      <h2>Categories</h2>
       <div class="category" v-for="(category, index) in categories" :key="index">
         <span class="badge">{{ category }}</span>
       </div>

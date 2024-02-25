@@ -1,6 +1,6 @@
 <template>
     <div class="column">
-      <h2>Kategori Ekle</h2>
+      <h2>Add Category</h2>
       <input type="text" v-model="newCategory" placeholder="New category name">
       <button @click="addCategory">Add</button>
     </div>

@@ -35,32 +35,58 @@ export default {
 <template>
   <div id="app">
   <div class="container">
-    <div class="row">
-      <div class="col-6">
-        <CategoryForm @add-category="addCategory" />
-      </div>
-      <div class="col-6">
-        <BookForm @add-book="addBook" :categories="categories" />
-      </div>
+      <div class="col-6 px-1">
+      <CategoryForm @add-category="addCategory" />
     </div>
+    <div class="col-6">
+      <BookForm @add-book="addBook" :categories="categories" />
+    </div>
+   
+  </div>
 
+  <div class="container">
     <div class="row">
-      <div class="col-3">
+      <div class="col px-1">
         <CategoryList :categories="categories" />
       </div>
-      <div class="col-9">
+      <div class="col books px-1">
         <BookTable :books="books" />
       </div>
     </div>
-    
-   
   </div>
     
    
   </div>
 </template>
 
-
 <style>
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; 
+  
+}
+
+.col-6 {
+  flex: 0 0 300px; 
+  max-width: 300px; 
+}
+
+.col{
+  flex: 0 0 800px; 
+  max-width: 800px; 
+}
+
+.column {
+  margin-left: 20px;
+  padding-left: 20px;
+  padding: 20px;
+  margin-bottom: 20px; 
+}
+
+.books {
+
+padding-bottom: 200px;
+}
 
 </style>

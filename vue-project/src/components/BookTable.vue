@@ -27,7 +27,6 @@
   },
     data() {
       return {
-        books: [], // Added books
         selectedBook: null 
       };
     },

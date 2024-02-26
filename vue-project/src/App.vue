@@ -35,10 +35,10 @@ export default {
 <template>
   <div id="app">
   <div class="container">
-      <div class="col-6 px-1">
+      <div class="col-6 px-3">
       <CategoryForm @add-category="addCategory" />
     </div>
-    <div class="col-6">
+    <div class="col-6 px-3">
       <BookForm @add-book="addBook" :categories="categories" />
     </div>
    

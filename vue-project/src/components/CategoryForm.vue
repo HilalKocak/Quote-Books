@@ -14,13 +14,12 @@
       };
     },
     methods: {
-      addCategory() {
-       
-        if (this.newCategory !== '' && !this.categories.includes(this.newCategory)) {
-          this.categories.push(this.newCategory);
-          this.newCategory = ''; //Clear input
-        }
-      }
+        addCategory() {
+    if (this.newCategory !== '') {
+      this.$emit('add-category', this.newCategory);
+      this.newCategory = ''; // Clear input
+    }
+  }
     }
   }
   </script>

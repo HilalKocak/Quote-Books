@@ -9,12 +9,13 @@
   
   <script>
   export default {
-    // props: ['categories'], // Categories from main component can be get as props
+    props: {
+    categories: Array
+   },
     data() {
-      return {
-        categories: ['Novel', 'Science Fiction', 'Detective', 'Fantasy'], 
-      };
-    }
+    
+}
+
   }
   </script>
   

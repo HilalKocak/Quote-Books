@@ -22,6 +22,9 @@
   
   <script>
   export default {
+    props: {
+    books: Array
+  },
     data() {
       return {
         books: [], // Added books

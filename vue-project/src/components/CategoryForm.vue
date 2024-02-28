@@ -1,3 +1,22 @@
+
+<script>
+export default {
+  data() {
+    return {
+      newCategory: ''
+    };
+  },
+  methods: {
+      addCategory() {
+  if (this.newCategory !== '') {
+    this.$emit('add-category', this.newCategory);
+    this.newCategory = ''; // Clear input
+  }
+}
+  }
+}
+</script>
+
 <template>
     <div class="column">
       <h2>Add Category</h2>
@@ -6,23 +25,6 @@
     </div>
   </template>
   
-  <script>
-  export default {
-    data() {
-      return {
-        newCategory: ''
-      };
-    },
-    methods: {
-        addCategory() {
-    if (this.newCategory !== '') {
-      this.$emit('add-category', this.newCategory);
-      this.newCategory = ''; // Clear input
-    }
-  }
-    }
-  }
-  </script>
   
   <style scoped>
   .column {

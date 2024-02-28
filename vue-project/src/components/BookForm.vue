@@ -1,20 +1,7 @@
-<template>
-    <div class="column">
-      <h2>Add book</h2>
-      <input type="text" v-model="newBook.author" placeholder="Author">
-      <input type="text" v-model="newBook.title" placeholder="Book">
-      <select v-model="newBook.category">
-        <option disabled value="">Please select a category</option>
-        <option v-for="(category, index) in categories" :key="index" :value="category">{{ category }}</option>
-      </select>
-      <button @click="addBook">Add</button>
-    </div>
-  </template>
-  
-  <script>
+<script>
   export default {
     props: {
-    categories: Array // Bu prop, üst bileşenden (App.vue) kategori listesini alacak
+    categories: Array 
   },
     data() {
       return {
@@ -32,6 +19,20 @@
 
   }
   </script>
+<template>
+    <div class="column">
+      <h2>Add book</h2>
+      <input type="text" v-model="newBook.author" placeholder="Author">
+      <input type="text" v-model="newBook.title" placeholder="Book">
+      <select v-model="newBook.category">
+        <option disabled value="">Please select a category</option>
+        <option v-for="(category, index) in categories" :key="index" :value="category">{{ category }}</option>
+      </select>
+      <button @click="addBook">Add</button>
+    </div>
+  </template>
+  
+  
   
 <style scoped>
 .column {

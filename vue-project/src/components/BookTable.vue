@@ -1,3 +1,23 @@
+
+<script>
+export default {
+  props: {
+  books: Array
+},
+  data() {
+    return {
+      selectedBook: null 
+    };
+  },
+  methods: {
+    toggleQuote(index) {
+      // When clicked the book
+      this.selectedBook = index === this.selectedBook ? null : index;
+    }
+  }
+}
+</script>
+
 <template>
     <div class="column">
       <h2>Books</h2>
@@ -20,24 +40,6 @@
     </div>
   </template>
   
-  <script>
-  export default {
-    props: {
-    books: Array
-  },
-    data() {
-      return {
-        selectedBook: null 
-      };
-    },
-    methods: {
-      toggleQuote(index) {
-        // When clicked the book
-        this.selectedBook = index === this.selectedBook ? null : index;
-      }
-    }
-  }
-  </script>
   
   <style scoped>
    table {

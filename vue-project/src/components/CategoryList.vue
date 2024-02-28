@@ -1,3 +1,14 @@
+<script>
+export default {
+  props: {
+  categories: Array
+ },
+  data() {
+  
+}
+
+}
+</script>
 <template>
     <div class="column">
       <h2>Categories</h2>
@@ -7,17 +18,7 @@
     </div>
   </template>
   
-  <script>
-  export default {
-    props: {
-    categories: Array
-   },
-    data() {
-    
-}
 
-  }
-  </script>
   
   <style scoped>
    .badge {
